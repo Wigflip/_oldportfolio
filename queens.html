@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/foundation.css">
+	<link rel="stylesheet" href="css/normalize.css"/>
+	<link rel="stylesheet" href="css/portfolio.css"/>
+	<link href="https://fonts.googleapis.com/css?family=Fjalla+One|Secular+One" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="css/slick/slick-theme.css"/>	
+	
+	<title>JDN STK</title>
+</head>
+<body>
+	<header>
+		<div class="logo">
+			<a href="index.html" alt="Home"><img src="images/jordan.png"></a>
+			<h3>Designer/Developer</h3>
+		</div>
+	</header>
+
+	<div class="work-projectpage">
+		<div class="row">
+			<div class="work-images small-12 medium-6 columns">
+				<div class="desktop-layout">
+					<img src ="images/fqw1.png">
+					<img src ="images/fqw-history.png">
+					<img src ="images/fqw-gallery.png">
+				</div>	
+				<div class="mobile-carousel" dir="rtl">
+					<div><img src ="images/fqw1.png"></div>
+					<div><img src ="images/fqw-history.png"></div>
+					<div><img src ="images/fqw-gallery.png"></div>
+				</div>	
+			</div>		
+			<div class="work-description small-12 medium-6 columns">
+				<h2>Friends of Queen's Wood</h2>
+				<h4>Design, Development, Mobile</h4>
+				<p>'Friends of Queen's Woods' is a group dedicated looking after the woods and its wildlife. Their current website, originally created in 2007(!), is in dire need of re-designing. 
+				</p>
+				<p>The purpose of the website is to inform vistors on facilities, events and wildlife in the woods. This requires several pages and as a result, the navigation on the current website is cluttered. I combined multiply, related links into a drop down menu under one button on the navigation. 
+				</p>
+				<p>For the history page I wanted each year to have some significance so i used full window images.
+				</p>
+				<p>Working pages: Home, History and Gallery.</p>
+
+				<a href="Queens/index.html">Visit Demo site</a>
+			</div>	
+		</div>
+	</div>
+	<footer>
+	<!-- 	<a>Twitter</a>
+	<a>LinkedIn</a>	 -->
+	<p>	&#169 Jordan Stock 2016</p>
+</footer>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="js/slick/slick.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+
+	/*$(window).on('resize', function(){*/
+
+		/*CAROUSEL FOR IMAGES ON MOBILE*/
+
+		if($(window).width() < 600){
+			$('.mobile-carousel').slick({
+				rtl:true,
+				arrows:true,
+				dots:true,
+				mobileFirst:true,
+				swipe:true
+		 	});	
+		}else{
+			console.log("hit");
+			$('.mobile-carousel').slick('unslick');
+		}
+
+	/*});*/
+
+	});
+</script>
+
+</body>
+</html>

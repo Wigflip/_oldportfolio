@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/foundation.css">
+	<link rel="stylesheet" href="css/normalize.css"/>
+	<link rel="stylesheet" href="css/portfolio.css"/>
+	<link href="https://fonts.googleapis.com/css?family=Fjalla+One|Secular+One" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="css/slick/slick-theme.css"/>			
+	
+	<title>JDN STK</title>
+</head>
+<body>
+	<header>
+		<div class="logo">
+			<a href="index.html"><img src="images/jordan.png"></a>
+			<h3>Designer/Developer</h3>
+		</div>
+	</header>
+
+	<div class="work-projectpage">
+		<div class="row">
+			<div class="work-images small-12 medium-6 columns">
+				<div class="desktop-layout">
+					<img src ="images/kcocover.png">
+					<img src ="images/fqw-history.png">
+					<img src ="images/fqw-gallery.png">
+				</div>	
+				<div class="mobile-carousel" dir="rtl">
+					<div><img src ="images/kcocover.png"></div>
+					<div><img src ="images/fqw-history.png"></div>
+					<div><img src ="images/fqw-gallery.png"></div>
+				</div>	
+			</div>		
+			<div class="work-description small-12 medium-6 columns">
+				<h2>K.CO Clothing</h2>
+				<h4>Design, Development</h4>
+				<p>	I wanted to try my hand at making a clothing site. The clothing line is limited to a few items and I wanted each item to stand out. 
+				</p>
+				<p>	I opted for a minimalist approach with little colour to allow for the clothes to take centre stage.
+				</p>
+				<a href="k.co/index.html">Visit Demo site</a>
+			</div>	
+		</div>
+	</div>
+	<footer>
+	<!-- 	<a>Twitter</a>
+	<a>LinkedIn</a>	 -->
+	<p>	&#169 Jordan Stock 2016</p>
+	</footer>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="js/slick/slick.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+
+	/*$(window).on('resize', function(){*/
+
+		if($(window).width() < 600){
+			$('.mobile-carousel').slick({
+				rtl:true,
+				arrows:true,
+				dots:true,
+				mobileFirst:true,
+				swipe:true
+		 	});	
+		}else{
+			console.log("hit");
+			$('.mobile-carousel').slick('unslick');
+		}
+
+	/*});*/
+
+	});
+</script>
+
+</body>
+
+</html>
