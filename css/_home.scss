@@ -1,0 +1,148 @@
+html {
+	  box-sizing: border-box;
+	}
+	*, *:before, *:after {
+	  box-sizing: inherit; 
+	  margin: 0;
+	  padding: 0;
+	}
+
+	@function calculateRem($size) {
+	  $remSize: $size / 16px;
+	  @return #{$remSize}rem;
+	}
+
+	@mixin fontSize($size) {
+	  font-size: $size; //Fallback in px
+	  font-size: calculateRem($size);
+	}
+
+
+	ul{
+		margin:0 0 0 0;
+	}
+
+	.Francois{
+		font-family: 'Francois One', sans-serif;
+	}
+
+	h3{
+		@extend .Francois;
+		color:#673500;
+	}
+
+
+	header {
+	width:100%;
+	height:200px;
+	text-align: center;
+	@extend .Francois;
+	
+		img{
+			height:110px;
+			width:auto;
+			margin: 30px 0 20px 0;
+		}
+
+		h3{
+			@extend .Francois;
+			color:#673500;
+		}
+
+	}
+
+	.work{
+		margin:50px 0 0 0;
+	}
+
+	.work-homepage{
+		@extend .work;
+		height:auto;
+	}
+
+	.project{
+		border:1px solid black;
+	}
+
+	.project-image{
+		position:relative;
+		height:240px;
+
+		img{
+			height:100%;
+			width:100%;
+		}
+
+		&:hover{
+			.opacity-layer{
+				opacity:0.7;
+			}
+		}
+	}
+
+	.project-info{
+		background-color: #E07300;
+		padding: 15px 15px ;
+		height:82px;
+		text-align:left;
+		@extend .Francois;
+	}
+
+
+	.project-name{
+	 	@include fontSize(20px);
+	 	color:white;
+	}
+
+
+	.tag {
+		@include fontSize(16px);	
+		/*color:#8C4800;*/ 
+		color:#673500;
+	}
+
+	.opacity-layer{
+		position:absolute;
+		height:100%;
+		width:100%;
+		background-color: black;
+		opacity:0;
+		transition: .3s opacity ease-in-out;
+	}
+
+	/*Phones*/
+
+	@media screen and (min-width:414px) and (max-width:770px){
+
+		.project-image{
+			height:200px;
+		}
+		.project-name{
+			@include fontSize(16px);
+		}
+
+		.tag{
+			@include fontSize(12px);
+		}
+	}
+
+	/*Tablets*/
+
+
+	@media screen and (min-width:768px) and (max-width:837px){
+		.project-name{
+			@include fontSize(16px);
+		}
+
+		.tag{
+			@include fontSize(12px);
+		}
+	}
+
+	/*Laptops & Desktops*/
+
+	@media screen and (min-width:1024px) and (max-width:1400px){
+		.row{
+			max-width:59rem;
+		}	
+	}

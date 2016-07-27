@@ -1,0 +1,36 @@
+	.work-projectpage{
+		@extend .work;
+	}
+
+	.work-images {	
+	text-align:center;
+		img {
+			margin-bottom: 20px;
+		}
+
+		p{
+			display:block;
+
+		}
+	}
+
+	.more-images{
+		display:none;
+	}
+
+	.work-description{
+
+		h2 {
+		font-family: 'Grind Zero'
+		}
+
+		h4{
+			font-style: italic;
+		}
+		a {
+			line-height: .2;
+			padding:10px 10px 10px 10px;	
+			color: white;
+			background-color: #ff9626;	
+		}
+	}
