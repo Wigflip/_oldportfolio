@@ -112,7 +112,13 @@ html {
 
 	/*Phones*/
 
-	@media screen and (min-width:414px) and (max-width:770px){
+	@media screen and (max-width:770px){
+
+		.project{
+			width:70%;
+			margin:0 auto 30px auto;
+
+		}
 
 		.project-image{
 			height:200px;
@@ -123,6 +129,15 @@ html {
 
 		.tag{
 			@include fontSize(12px);
+		}
+
+		.desktop-layout{
+			display:none;
+		}
+
+		.mobile-carousel{
+			display:block;
+
 		}
 	}
 
@@ -137,12 +152,20 @@ html {
 		.tag{
 			@include fontSize(12px);
 		}
+
+		.desktop-layout{
+			display:none;
+		}
 	}
 
 	/*Laptops & Desktops*/
 
 	@media screen and (min-width:1024px) and (max-width:1400px){
 		.row{
-			max-width:59rem;
+			max-width:56rem;
 		}	
+
+		.mobile-carousel{
+			display:none;
+		}
 	}
