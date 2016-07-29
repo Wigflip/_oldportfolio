@@ -1,5 +1,6 @@
 html {
 	  box-sizing: border-box;
+	  overflow-x:hidden;
 	}
 	*, *:before, *:after {
 	  box-sizing: inherit; 
@@ -114,6 +115,7 @@ html {
 
 	@media screen and (max-width:770px){
 
+
 		.project{
 			width:70%;
 			margin:0 auto 30px auto;
@@ -139,6 +141,22 @@ html {
 			display:block;
 
 		}
+
+		.work-description{
+			h2{
+				text-align:center;
+				font-size:1.8rem;
+			}
+
+			h4{
+				text-align:center;
+			}
+		}
+
+		.work-link{
+			text-align:center;
+		}
+		
 	}
 
 	/*Tablets*/
@@ -153,9 +171,17 @@ html {
 			@include fontSize(12px);
 		}
 
-		.desktop-layout{
+		.mobile-carousel{
 			display:none;
 		}
+
+		work-description{
+			h2{
+				font-size:1.8em;
+			}
+		}
+
+
 	}
 
 	/*Laptops & Desktops*/
