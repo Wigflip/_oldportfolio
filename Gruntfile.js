@@ -10,7 +10,7 @@ module.exports = function(grunt){
 		            style: 'nested'
 		        },
 		        files: {
-		            'css/global.css': 'css/global.scss'
+		            'css/style.css': 'css/style.scss'
 		        }
 		    } 
     	},
