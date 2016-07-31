@@ -120,7 +120,7 @@ header {
 /*Laptops & Desktops*/
 @media screen and (min-width: 1024px) {
   .row {
-    max-width: 56rem; }
+    max-width: 60rem; }
 
   .mobile-carousel {
     display: none; } }
