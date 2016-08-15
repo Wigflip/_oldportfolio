@@ -61,29 +61,43 @@ html {
 		height:auto;
 	}
 
-	.project{
-		border:1px solid black;
-	}
-
 	.project-image{
 		position:relative;
 		height:240px;
+		border:2px solid #673500;
 
 		img{
 			height:100%;
 			width:100%;
 		}
 
+		span{
+			position:absolute;
+			top:50%;
+			left:50%;
+			display:inline-block;
+			margin:-16.5px 0 0 -65px;
+			@extend .Francois;
+			@include fontSize(22px);
+			text-transform:uppercase;
+			color:white;
+			opacity:0;
+			transition:opacity .3s ease-in-out;
+		}
+
 		&:hover{
 			.opacity-layer{
-				opacity:0.7;
+				opacity:0.9;
+			}
+
+			span{
+				opacity:1;
 			}
 		}
 	}
 
 	.project-info{
-		background-color: #E07300;
-		padding: 15px 15px ;
+		padding: 15px 0;
 		height:82px;
 		text-align:left;
 		@extend .Francois;
@@ -91,8 +105,8 @@ html {
 
 
 	.project-name{
-	 	@include fontSize(20px);
-	 	color:white;
+	 	@include fontSize(22px);
+	 	color:#E07300;
 	}
 
 
@@ -196,4 +210,3 @@ html {
 		}
 	}
 
-/*This is for a commit :)*/

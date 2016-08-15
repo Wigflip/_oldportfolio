@@ -11,7 +11,7 @@ html {
 ul {
   margin: 0 0 0 0; }
 
-.Francois, h3, header, header h3, .project-info, .work-description h2, .work-description h4, footer {
+.Francois, h3, header, header h3, .project-image span, .project-info, .work-description h2, .work-description h4, footer {
   font-family: 'Francois One', sans-serif; }
 
 h3 {
@@ -34,28 +34,39 @@ header {
 .work-homepage {
   height: auto; }
 
-.project {
-  border: 1px solid black; }
-
 .project-image {
   position: relative;
-  height: 240px; }
+  height: 240px;
+  border: 2px solid #673500; }
   .project-image img {
     height: 100%;
     width: 100%; }
+  .project-image span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: inline-block;
+    margin: -16.5px 0 0 -65px;
+    font-size: 22px;
+    font-size: 1.375rem;
+    text-transform: uppercase;
+    color: white;
+    opacity: 0;
+    transition: opacity .3s ease-in-out; }
   .project-image:hover .opacity-layer {
-    opacity: 0.7; }
+    opacity: 0.9; }
+  .project-image:hover span {
+    opacity: 1; }
 
 .project-info {
-  background-color: #E07300;
-  padding: 15px 15px;
+  padding: 15px 0;
   height: 82px;
   text-align: left; }
 
 .project-name {
-  font-size: 20px;
-  font-size: 1.25rem;
-  color: white; }
+  font-size: 22px;
+  font-size: 1.375rem;
+  color: #E07300; }
 
 .tag {
   font-size: 16px;
@@ -145,7 +156,7 @@ header {
   margin: 30px 0; }
 
 footer {
-  margin: 20px 0 0 0;
+  margin: 35px 0 0 0;
   text-align: center;
   font-size: 18px;
   color: #673500; }
